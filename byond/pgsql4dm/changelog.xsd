@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="changelog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="include">
+						<xs:complexType>
+							<xs:attribute name="file" type="xs:string" />
+							<xs:attribute name="relativeToChangelogFile" type="xs:boolean" />
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="changeSet">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:choice minOccurs="1" maxOccurs="unbounded">
+									<xs:element name="sql">
+										<xs:complexType mixed="true">
+											<xs:sequence>
+												<xs:element name="comment" minOccurs="0" maxOccurs="1" type="xs:string" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:choice>
+							</xs:sequence>
+							<xs:attribute name="id" type="xs:string" />
+							<xs:attribute name="author" type="xs:string" />
+							<xs:attribute name="failOnError" type="xs:boolean" default="true" />
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

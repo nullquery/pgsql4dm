@@ -1,0 +1,10 @@
+The following files contained herein are subject to an alternate license:
+
+- libpgsql4dm.dll
+- libpgsql4dm.so
+
+These files are Copyright (C) CleSoft Internet Services. All rights reserved.
+Distribution of these files are permitted, but these files are intended as
+closed-source components and must not be modified without express permission.
+
+Written by "NullQuery" <nq@nullquery.net>, 2015-11-08
